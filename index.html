@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Scoring Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Credit Scoring Model</h1>
+
+    <form id="creditForm">
+        <label>Monthly Income ($)</label>
+        <input type="number" id="income" required>
+
+        <label>Total Debt ($)</label>
+        <input type="number" id="debt" required>
+
+        <label>Payment History (0–100)</label>
+        <input type="number" id="history" min="0" max="100" required>
+
+        <label>Credit Utilization (%)</label>
+        <input type="number" id="utilization" min="0" max="100" required>
+
+        <button type="submit">Predict Creditworthiness</button>
+    </form>
+
+    <div id="output" class="output hidden">
+        <h2>Prediction Result</h2>
+        <p id="prediction"></p>
+        <p id="score"></p>
+
+        <h3>Model Metrics</h3>
+        <ul>
+            <li>Precision: <span id="precision"></span></li>
+            <li>Recall: <span id="recall"></span></li>
+            <li>F1-Score: <span id="f1"></span></li>
+            <li>ROC-AUC: <span id="roc"></span></li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
